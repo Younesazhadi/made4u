@@ -512,21 +512,21 @@ section {
 
 .product-image.exterior {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('../images/exterieur.png');
+                url('images/exterieur.png');
     background-size: cover;
     background-position: center;
 }
 
 .product-image.interior {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('../images/interieur.png');
+                url('images/interieur.png');
     background-size: cover;
     background-position: center;
 }
 
 .product-image.flooring {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('../images/revetement.png');
+                url('images/revetement.png');
     background-size: cover;
     background-position: center;
 }
