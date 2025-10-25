@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Made4U</title>
+    
+    <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+
+</head>
+
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+    <img src="images/logo-made4u.png" alt="Made4U Logo">
+</div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                <li><a href="#apropos" class="nav-link">À propos</a></li>
+                <li class="dropdown">
+                    <a href="#produits" class="nav-link">Nos Produits</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#exterieur">Produits Extérieur</a></li>
+                        <li><a href="#interieur">Produits Intérieur</a></li>
+                        <li><a href="#revetement">Revêtement du Sol</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#devis" class="btn-devis">Devis Gratuit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section avec Diaporama -->
+<section class="hero" id="accueil">
+    <div class="hero-slideshow">
+        <div class="hero-slide active" style="background-image: url('images/slide1.png')"></div>
+        <div class="hero-slide" style="background-image: url('images/slide2.png')"></div>
+        <div class="hero-slide" style="background-image: url('images/slide3.png')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h1 class="hero-title">Transformez Vos Espaces</h1>
+        <p class="hero-subtitle"> Sublimez vos espaces avec des solutions uniques et élégantes, adaptées à vos envies</p>
+        <a href="#apropos" class="btn btn-primary">Découvrir Notre Expertise</a>
+    </div>
+    <div class="scroll-indicator">
+        <span></span>
+    </div>
+    <!-- Indicateurs de slides -->
+    <div class="slide-indicators">
+        <span class="indicator active" data-slide="0"></span>
+        <span class="indicator" data-slide="1"></span>
+        <span class="indicator" data-slide="2"></span>
+    </div>
+</section>
+
+
+    <!-- À Propos Section -->
+    <section class="about" id="apropos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">À Propos</span>
+                <h2>Notre Engagement Qualité</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                     <p>Avec plus de 40 ans d’expérience dans les solutions d’aménagement et de revêtement, notre équipe accompagne chaque client dans la transformation de ses espaces, en conjuguant créativité et savoir-faire technique.</p>
+    <p>Nous sélectionnons rigoureusement des matériaux haut de gamme pour garantir à la fois un design d’exception et une durabilité sans compromis. Notre engagement : vous offrir un accompagnement personnalisé, des conseils experts, et une réalisation sur-mesure pour que chaque projet soit unique.</p>
+    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Expertise professionnelle</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Produits certifiés</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span>Service personnalisé</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                     <img src="images/expert_pergola_adjust.png" alt="Expert Made4U réglant une pergola" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Produits Section -->
+<section class="products" id="produits">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Nos Produits</span>
+            <h2>Découvrez Notre Gamme</h2>
+        </div>
+        <div class="products-grid">
+            <div class="product-card" id="exterieur">
+                <div class="product-image exterior">
+                    <div class="product-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 25L30 10L50 25V50H10V25Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 50V30H40V50" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-overlay">
+                    <h3>PRODUITS EXTÉRIEUR</h3>
+                    <p>Stores bannes, pergolas bioclimatiques et protections solaires conçues pour résister aux intempéries tout en embellissant votre extérieur avec style et durabilité.</p>
+                    <a href="#contact" class="btn btn-secondary">En savoir plus</a>
+                </div>
+            </div>
+            
+            <div class="product-card" id="interieur">
+                <div class="product-image interior">
+                    <div class="product-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 30L30 5L55 30M10 25V50H50V25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 35H25M35 35H40M20 42H25M35 42H40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-overlay">
+                    <h3>PRODUITS INTÉRIEUR</h3>
+                    <p>Stores enrouleurs, plissés, vénitiens ou bateaux alliant élégance et efficacité pour gérer la lumière naturelle et la décoration de vos intérieurs.</p>
+                    <a href="#contact" class="btn btn-secondary">En savoir plus</a>
+                </div>
+            </div>
+            
+            <div class="product-card" id="revetement">
+                <div class="product-image flooring">
+                    <div class="product-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 15H50M10 25H50M10 35H50M10 45H50" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M20 10V50M30 10V50M40 10V50" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-overlay">
+                    <h3>REVÊTEMENT DU SOL</h3>
+                    <p>Large choix de revêtements haut de gamme : moquettes, parquet, PVC, faciles à entretenir, offrant confort et esthétique pour tous vos espaces intérieurs.</p>
+                    <a href="#contact" class="btn btn-secondary">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Statistiques Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number1" data-target="300">0</div>
+                    <div class="stat-label">Projets Réalisés</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="2">0</div>
+                    <div class="stat-label">Showrooms</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number3" data-target="40">0</div>
+                    <div class="stat-label">Années d'Expérience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number4" data-target="100">0</div>
+                    <div class="stat-label">Clients Satisfaits</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confiance Section 
+    <section class="trust">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Confiance</span>
+                <h2>Ils Nous Font Confiance</h2>
+            </div>
+            <div class="trust-content">
+                <div class="trust-item">
+                    <div class="trust-icon">🏆</div>
+                    <h3>Qualité Garantie</h3>
+                    <p>Tous nos produits sont certifiés et garantis pour une durabilité optimale.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">⚡</div>
+                    <h3>Installation Rapide</h3>
+                    <p>Notre équipe qualifiée assure une pose professionnelle dans les délais convenus.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">💎</div>
+                    <h3>Conseils Experts</h3>
+                    <p>Un accompagnement personnalisé pour choisir les solutions adaptées à votre projet.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🛡️</div>
+                    <h3>Service Après-Vente</h3>
+                    <p>Un suivi continu et un SAV réactif pour votre totale satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+<!-- Partenaires Section -->
+<section class="partners">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Partenaires</span>
+            <h2>Nos Partenaires de Confiance</h2>
+        </div>
+        <div class="partners-grid">
+            <div class="partner-logo">
+                <img src="images/partner1.png" alt="Partenaire 1">
+            </div>
+            <div class="partner-logo">
+                <img src="images/partner2.png" alt="Partenaire 2">
+            </div>
+            <div class="partner-logo">
+                <img src="images/partner3.png" alt="Partenaire 3">
+            </div>
+            <div class="partner-logo">
+                <img src="images/partner4.png" alt="Partenaire 4">
+            </div>
+            <div class="partner-logo">
+                <img src="images/partner5.png" alt="Partenaire 5">
+            </div>
+            <div class="partner-logo">
+                <img src="images/partner6.png" alt="Partenaire 6">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contact</span>
+                <h2>Contactez-Nous</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Informations de Contact</h3>
+                    <div class="contact-item">
+                        <strong>Adresse:</strong>
+                        <p>Av Kiffah bloc AH N8 - Rabat - CYM</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Téléphone:</strong>
+                        <p>+212 661-256523</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email:</strong>
+                        <p>contact@made4u.ma</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Horaires:</strong>
+                        <p>Lun - Ven: 9h - 18h<br>Sam: 10h - 17h</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="devis">
+                    <h3>Demande de Devis Gratuit</h3>
+                    <input type="text" placeholder="Votre nom" required>
+                    <input type="email" placeholder="Votre email" required>
+                    <input type="tel" placeholder="Votre téléphone" required>
+                    <select required>
+                        <option value="">Type de projet</option>
+                        <option value="exterieur">Produits Extérieur</option>
+                        <option value="interieur">Produits Intérieur</option>
+                        <option value="revetement">Revêtement du Sol</option>
+                    </select>
+                    <textarea placeholder="Décrivez votre projet" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Envoyer la Demande</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Made4U</h4>
+                    <p>Votre partenaire de confiance pour tous vos projets de revêtement et d'aménagement.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#apropos">À propos</a></li>
+                        <li><a href="#produits">Nos Produits</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Produits</h4>
+                    <ul>
+                        <li><a href="#exterieur">Produits Extérieur</a></li>
+                        <li><a href="#interieur">Produits Intérieur</a></li>
+                        <li><a href="#revetement">Revêtement du Sol</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Av Kiffah bloc AH N8</li>
+                        <li>Rabat</li>
+                        <li>+212 661-256523</li>
+                        <li>contact@made4u.ma</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Made4U. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
