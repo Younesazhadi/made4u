@@ -1,3 +1,5 @@
+/* Version: 2024-10-26-v4 - Modifications complètes */
+
 /* Reset & Variables */
 * {
     margin: 0;
@@ -251,6 +253,7 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
+    z-index: 1003;
 }
 
 .mobile-menu-toggle span {
@@ -331,6 +334,39 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 2rem;
     opacity: 0.9;
     animation: fadeInUp 1s ease 0.2s backwards;
+}
+
+/* Réseaux sociaux dans le hero */
+.hero-social {
+    position: absolute;
+    bottom: 150px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 4;
+}
+
+.hero-social a {
+    width: 45px;
+    height: 45px;
+    border: 2px solid rgba(189, 154, 104, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    background: rgba(32, 32, 32, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.hero-social a:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: scale(1.1);
+    border-color: var(--primary);
 }
 
 .scroll-indicator {
@@ -763,6 +799,17 @@ section {
     color: var(--gray);
 }
 
+/* Style téléphone comme footer */
+.contact-item p a {
+    color: var(--gray);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-item p a:hover {
+    color: var(--primary);
+}
+
 .contact-form h3 {
     color: var(--primary);
     margin-bottom: 2rem;
@@ -836,6 +883,34 @@ section {
     color: var(--primary);
 }
 
+/* Réseaux sociaux dans le footer */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 1.5rem;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(189, 154, 104, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.footer-social a:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
@@ -893,7 +968,7 @@ section {
 
     .mobile-menu-toggle {
         display: flex;
-        z-index: 1002;
+        z-index: 1003;
     }
 
     .logo img {
@@ -901,21 +976,21 @@ section {
         max-height: 90px;
     }
 
-    /* Menu Mobile avec fond opaque */
+    /* Menu Mobile avec couleur navbar */
     .nav-menu {
         position: fixed;
         left: -100%;
         top: 0;
         flex-direction: column;
-        background: #ffffff;
+        background: var(--dark);
         width: 100%;
         height: 100vh;
         text-align: center;
         transition: left 0.3s ease;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         padding: 5rem 2rem 2rem;
         overflow-y: auto;
-        z-index: 1001;
+        z-index: 1002;
         gap: 0;
     }
 
@@ -926,12 +1001,12 @@ section {
     .nav-menu li {
         width: 100%;
         margin: 0;
-        border-bottom: 1px solid #f0f0f0;
+        border-bottom: 1px solid rgba(189, 154, 104, 0.2);
     }
 
     .nav-menu .nav-link {
         display: block;
-        color: var(--dark) !important;
+        color: var(--white) !important;
         padding: 1.2rem;
         font-size: 1.1rem;
         width: 100%;
@@ -941,15 +1016,28 @@ section {
         display: none;
     }
 
-    /* Dropdown Mobile */
+    /* Dropdown Mobile - Ouvrir/Fermer au clic */
     .dropdown {
         position: relative;
     }
 
     .dropdown > .nav-link {
         padding: 1.2rem;
-        background: #f8f8f8;
+        background: rgba(189, 154, 104, 0.1);
         font-weight: 600;
+        position: relative;
+    }
+
+    .dropdown > .nav-link::before {
+        content: '+';
+        position: absolute;
+        right: 20px;
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    .dropdown.active > .nav-link::before {
+        content: '−';
     }
 
     .dropdown-menu {
@@ -960,7 +1048,7 @@ section {
         transform: none;
         margin: 0;
         padding: 0;
-        background: #f0f0f0;
+        background: rgba(189, 154, 104, 0.05);
         border-radius: 0;
         max-height: 0;
         overflow: hidden;
@@ -972,7 +1060,7 @@ section {
     }
 
     .dropdown-menu li {
-        border-bottom: 1px solid #e0e0e0;
+        border-bottom: 1px solid rgba(189, 154, 104, 0.15);
     }
 
     .dropdown-menu li:last-child {
@@ -983,10 +1071,12 @@ section {
         padding: 1rem 2rem;
         background: transparent;
         font-size: 1rem;
+        color: var(--gray) !important;
     }
 
     .dropdown-menu a:hover {
-        background: #e8e8e8;
+        background: rgba(189, 154, 104, 0.1);
+        color: var(--primary) !important;
     }
 
     .btn-devis {
@@ -995,38 +1085,19 @@ section {
         width: auto;
     }
 
-    /* Overlay pour fermer le menu */
-    body.menu-open::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1000;
-    }
-
-    body.menu-open {
-        overflow: hidden;
-    }
-
-    .navbar.menu-open {
-        background: var(--white);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .navbar.menu-open .logo img {
-        filter: none;
-    }
-
-    .navbar.menu-open .mobile-menu-toggle span {
-        background: var(--dark);
-    }
-
+    /* Hero plein écran avec swipe sur mobile */
     .hero {
-        height: 80vh;
-        min-height: 600px;
+        height: 100vh;
+        min-height: 100vh;
+    }
+
+    .hero-slideshow {
+        touch-action: pan-y;
+    }
+
+    .hero-content {
+        bottom: 120px;
+        position: absolute;
     }
 
     .hero-title {
@@ -1035,6 +1106,57 @@ section {
 
     .hero-subtitle {
         font-size: 1rem;
+    }
+
+    /* Réseaux sociaux repositionnés sur mobile */
+    .hero-social {
+        bottom: 200px;
+        right: 15px;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .hero-social a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    /* Indicateurs cachés sur mobile */
+    .scroll-indicator {
+        display: none;
+    }
+
+    .slide-indicators {
+        bottom: 150px;
+    }
+
+    /* Produits - Overlay automatique au scroll */
+    .product-card {
+        height: 400px;
+    }
+
+    .product-overlay {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .product-card.in-view .product-overlay {
+        opacity: 1;
+    }
+
+    /* Contact téléphone cliquable */
+    .contact-item a {
+        color: var(--gray);
+        text-decoration: none;
+    }
+
+    .contact-item a:hover {
+        color: var(--primary);
+    }
+
+    .navbar.menu-open .mobile-menu-toggle span {
+        background: var(--white);
     }
 
     .about-content,
@@ -1051,10 +1173,6 @@ section {
     .products-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
-    }
-
-    .product-card {
-        height: 400px;
     }
 
     .partners-grid {
@@ -1108,9 +1226,10 @@ section {
         font-size: 0.95rem;
     }
 
+    /* Hero plein écran mobile */
     .hero {
-        height: 70vh;
-        min-height: 500px;
+        height: 100vh;
+        min-height: 100vh;
     }
 
     .hero-title {
@@ -1121,6 +1240,28 @@ section {
     .hero-subtitle {
         font-size: 0.9rem;
         margin-bottom: 1.5rem;
+    }
+
+    .hero-social {
+        bottom: 180px;
+        right: 10px;
+        gap: 8px;
+    }
+
+    .hero-social a {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .slide-indicators {
+        bottom: 130px;
+        gap: 8px;
+    }
+
+    .indicator {
+        width: 10px;
+        height: 10px;
     }
 
     .btn {
@@ -1217,18 +1358,15 @@ section {
         font-size: 1.1rem;
     }
 
-    .scroll-indicator {
-        bottom: 20px;
+    .footer-social {
+        justify-content: center;
+        margin-top: 1rem;
     }
 
-    .slide-indicators {
-        bottom: 60px;
-        gap: 8px;
-    }
-
-    .indicator {
-        width: 10px;
-        height: 10px;
+    .footer-social a {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
     }
 }
 
@@ -1262,23 +1400,36 @@ section {
         font-size: 0.95rem;
         padding: 0.9rem;
     }
+
+    .hero-social a {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
 }
 
 /* Orientation paysage sur mobile */
 @media (max-height: 500px) and (orientation: landscape) {
     .hero {
-        height: auto;
+        height: 100vh;
         min-height: 100vh;
-        padding: 100px 0 50px;
     }
 
     .hero-title {
         font-size: 2rem;
     }
 
-    .scroll-indicator,
-    .slide-indicators {
+    .scroll-indicator {
         display: none;
+    }
+
+    .slide-indicators {
+        bottom: 30px;
+    }
+
+    .hero-social {
+        bottom: 80px;
+        right: 10px;
     }
 
     .nav-menu {
@@ -1292,7 +1443,8 @@ section {
         opacity: 0;
     }
 
-    .product-card.touched .product-overlay {
+    .product-card.touched .product-overlay,
+    .product-card.in-view .product-overlay {
         opacity: 1;
     }
 

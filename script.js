@@ -429,3 +429,48 @@ if (heroSection) {
         autoSlide = setInterval(nextSlide, slideInterval);
     });
 }
+// ============================================
+// DROPDOWN MOBILE - Ouvrir/Fermer au clic
+// ============================================
+const dropdownsMobile = document.querySelectorAll('.dropdown');
+dropdownsMobile.forEach(dropdown => {
+    const dropdownLink = dropdown.querySelector('.nav-link');
+    
+    dropdownLink.addEventListener('click', (e) => {
+        if (window.innerWidth <= 968) {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+            
+            // Fermer les autres dropdowns
+            dropdownsMobile.forEach(otherDropdown => {
+                if (otherDropdown !== dropdown) {
+                    otherDropdown.classList.remove('active');
+                }
+            });
+        }
+    });
+});
+
+// ============================================
+// PRODUCTS - Afficher overlay au scroll sur mobile
+// ============================================
+if (window.innerWidth <= 968) {
+    const productCards = document.querySelectorAll('.product-card');
+    
+    const productObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            } else {
+                entry.target.classList.remove('in-view');
+            }
+        });
+    }, {
+        threshold: 0.5,
+        rootMargin: '-50px'
+    });
+
+    productCards.forEach(card => {
+        productObserver.observe(card);
+    });
+}
