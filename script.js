@@ -1,3 +1,29 @@
+// ============================================
+// PRELOADER
+// ============================================
+window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    
+    setTimeout(function() {
+        preloader.classList.add('hidden');
+        
+        setTimeout(function() {
+            preloader.style.display = 'none';
+        }, 500);
+    }, 1000);
+});
+
+// Fallback: masquer après 5 secondes max
+setTimeout(function() {
+    const preloader = document.getElementById('preloader');
+    if (preloader && !preloader.classList.contains('hidden')) {
+        preloader.classList.add('hidden');
+        setTimeout(function() {
+            preloader.style.display = 'none';
+        }, 500);
+    }
+}, 5000);
+
 // Mobile Menu Toggle
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const navMenu = document.getElementById('navMenu');

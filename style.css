@@ -17,6 +17,79 @@
     --dark2: #1a1a1a;
 }
 
+/* ============================================
+   PRELOADER
+   ============================================ */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #202020;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 3rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.loader-progress {
+    width: 300px;
+    height: 4px;
+    background: rgba(189, 154, 104, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.loader-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #BD9A68, #a88a5c);
+    width: 0%;
+    border-radius: 10px;
+    animation: progressBar 2s ease-in-out forwards;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% { 
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+@keyframes progressBar {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* Responsive Preloader */
+@media (max-width: 576px) {
+    .loader-logo {
+        width: 120px;
+    }
+
+    .loader-progress {
+        width: 250px;
+    }
+}
+
 body {
    font-family: 'Poppins', sans-serif;
   font-weight: 400;
