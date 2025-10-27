@@ -24,39 +24,83 @@ setTimeout(function() {
     }
 }, 5000);
 
-// Mobile Menu Toggle
+// BURGER MENU : Animation et ouverture/fermeture
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const navMenu = document.getElementById('navMenu');
-const navbar = document.getElementById('navbar');
+const body = document.body;
+const spans = mobileMenuToggle.querySelectorAll('span');
 
 mobileMenuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
-    navbar.classList.toggle('menu-open');
-    
-    // Animate hamburger menu
-    const spans = mobileMenuToggle.querySelectorAll('span');
-    spans[0].style.transform = navMenu.classList.contains('active') 
-        ? 'rotate(45deg) translateY(8px)' 
-        : 'none';
-    spans[1].style.opacity = navMenu.classList.contains('active') ? '0' : '1';
-    spans[2].style.transform = navMenu.classList.contains('active') 
-        ? 'rotate(-45deg) translateY(-8px)' 
-        : 'none';
-});
-
-// Close mobile menu when clicking on a link
-const navLinks = document.querySelectorAll('.nav-link, .btn-devis');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        navbar.classList.remove('menu-open');
-        
-        const spans = mobileMenuToggle.querySelectorAll('span');
+    body.classList.toggle('menu-open');
+    if (navMenu.classList.contains('active')) {
+        spans[0].style.transform = 'rotate(45deg) translateY(8px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translateY(-8px)';
+    } else {
         spans[0].style.transform = 'none';
         spans[1].style.opacity = '1';
         spans[2].style.transform = 'none';
+    }
+});
+
+// Ferme le menu mobile quand on clique dehors
+document.addEventListener('click', (e) => {
+    if (navMenu.classList.contains('active') && 
+        !navMenu.contains(e.target) && 
+        !mobileMenuToggle.contains(e.target)) {
+        navMenu.classList.remove('active');
+        body.classList.remove('menu-open');
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+    }
+});
+
+// "Nos Produits" scroll vers la section et ferme le menu mobile
+const produitsLink = document.querySelector('.nav-link[href="#produits"]');
+if (produitsLink) {
+    produitsLink.addEventListener('click', function(e) {
+        // Pour toujours obtenir le scroll smooth sur mobile ET desktop
+        if (this.getAttribute('href') === '#produits') {
+            e.preventDefault();
+            const section = document.querySelector('#produits');
+            if (section) {
+                const offsetTop = section.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+            // Sur mobile : ferme le menu après clic
+            if (window.innerWidth <= 968) {
+                setTimeout(() => {
+                    navMenu.classList.remove('active');
+                    body.classList.remove('menu-open');
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }, 350);
+            }
+        }
+    });
+}
+
+// Ferme le menu mobile pour tous les autres liens nav
+const navLinks = document.querySelectorAll('.nav-link:not([href="#produits"]),.btn-devis');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 968) {
+            navMenu.classList.remove('active');
+            body.classList.remove('menu-open');
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        }
     });
 });
+
+
 
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
@@ -429,27 +473,7 @@ if (heroSection) {
         autoSlide = setInterval(nextSlide, slideInterval);
     });
 }
-// ============================================
-// DROPDOWN MOBILE - Ouvrir/Fermer au clic
-// ============================================
-const dropdownsMobile = document.querySelectorAll('.dropdown');
-dropdownsMobile.forEach(dropdown => {
-    const dropdownLink = dropdown.querySelector('.nav-link');
-    
-    dropdownLink.addEventListener('click', (e) => {
-        if (window.innerWidth <= 968) {
-            e.preventDefault();
-            dropdown.classList.toggle('active');
-            
-            // Fermer les autres dropdowns
-            dropdownsMobile.forEach(otherDropdown => {
-                if (otherDropdown !== dropdown) {
-                    otherDropdown.classList.remove('active');
-                }
-            });
-        }
-    });
-});
+
 
 // ============================================
 // PRODUCTS - Afficher overlay au scroll sur mobile
