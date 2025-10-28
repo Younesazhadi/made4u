@@ -1,9 +1,9 @@
 /* ============================================
-   PRODUCTS PAGE - EXTERIEUR
-   Version finale avec effet mobile (description après 1 sec)
+   REVETEMENT SOL PAGE
+   Style identique aux autres pages produits
    ============================================ */
 
-/* Hero Section avec Slideshow */
+/* Hero Section */
 .products-hero {
     height: 100vh;
     min-height: 600px;
@@ -60,10 +60,6 @@
     padding: 0 20px;
 }
 
-
-
-
-
 .products-hero-title {
     font-size: 4rem;
     font-weight: 700;
@@ -85,7 +81,6 @@
     animation: fadeInUp 1s ease 0.2s backwards;
 }
 
-/* Bouton dans le Hero */
 .products-hero .btn-primary {
     animation: fadeInUp 1s ease 0.4s backwards;
 }
@@ -122,17 +117,10 @@
 }
 
 @keyframes scrollDown {
-    0%, 100% { 
-        top: 5px; 
-        opacity: 1; 
-    }
-    50% { 
-        top: 15px; 
-        opacity: 0.5; 
-    }
+    0%, 100% { top: 5px; opacity: 1; }
+    50% { top: 15px; opacity: 0.5; }
 }
 
-/* Indicateurs de slides */
 .slide-indicators {
     position: absolute;
     bottom: 80px;
@@ -163,14 +151,8 @@
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Products Section */
@@ -186,7 +168,6 @@
     gap: 2rem;
 }
 
-/* Product Card */
 .product-card-main {
     position: relative;
     height: 500px;
@@ -201,9 +182,6 @@
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
-
-
-/* Product Image */
 .product-image-main {
     position: absolute;
     top: 0;
@@ -222,75 +200,28 @@
     transform: scale(1.05);
 }
 
-/* ============================================
-   NOUVELLES IMAGES DE FOND PRODUITS
-   ============================================ */
-
-.product-image-main.pergola {
+/* Images de fond */
+.product-image-main.moquette {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/pergola.png');
+                url('images/moquette.jpeg');
     background-size: cover;
     background-position: center;
 }
 
-.product-image-main.verso {
+.product-image-main.pvc {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/verso.png');
+                url('images/pvc.jpg');
     background-size: cover;
     background-position: center;
 }
 
-.product-image-main.store-banne {
+.product-image-main.parquet {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/store-banne.png');
+                url('images/parquet.png');
     background-size: cover;
     background-position: center;
 }
 
-.product-image-main.parasol {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/parasol.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.product-image-main.abri-voiture {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/abri-voiture.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.product-image-main.store-verriere {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/store-verriere.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.product-image-main.dalot {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/dalot.png');
-    background-size: cover;
-    background-position: center;
-}
-
-.product-image-main.couverture-piscine {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/couverture-piscine.png');
-    background-size: cover;
-    background-position: center;
-}
-
-.product-image-main.store-vertical {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/store-vertical.png');
-    background-size: cover;
-    background-position: center;
-}
-
-
-/* Product Icon */
 .product-icon-main {
     color: #BD9A68;
     z-index: 2;
@@ -304,7 +235,6 @@
     transform: scale(0.8);
 }
 
-/* Product Overlay */
 .product-overlay-main {
     position: absolute;
     top: 0;
@@ -345,7 +275,6 @@
     font-weight: 300;
 }
 
-/* Product Features List */
 .product-features {
     list-style: none;
     margin-bottom: 2rem;
@@ -367,7 +296,6 @@
     font-size: 0.75rem;
 }
 
-/* Button Product */
 .btn-product {
     background: transparent;
     color: #BD9A68;
@@ -391,9 +319,8 @@
     box-shadow: 0 5px 15px rgba(189, 154, 104, 0.4);
 }
 
-/* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, #BD9A68  0%, #202020 100%);
+    background: linear-gradient(135deg, #BD9A68 0%, #202020 100%);
     padding: 5rem 0;
     text-align: center;
     color: #FFFFFF;
@@ -415,7 +342,6 @@
     margin-right: auto;
 }
 
-/* Animation d'entrée - Toutes les cartes ensemble */
 .product-card-main {
     opacity: 0;
     transform: translateY(30px);
@@ -425,241 +351,34 @@
     animation: fadeInUp 0.6s ease forwards;
 }
 
-/* Toutes les cartes s'animent en même temps (pas de délai) */
-.product-card-main:nth-child(1).visible,
-.product-card-main:nth-child(2).visible,
-.product-card-main:nth-child(3).visible,
-.product-card-main:nth-child(4).visible,
-.product-card-main:nth-child(5).visible,
-.product-card-main:nth-child(6).visible,
-.product-card-main:nth-child(7).visible,
-.product-card-main:nth-child(8).visible,
-.product-card-main:nth-child(9).visible {
-    animation-delay: 0s;
-}
-
-/* Animations pour mobile */
-@keyframes showOverlay {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes hideIcon {
-    from {
-        opacity: 1;
-        transform: scale(1);
-    }
-    to {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-}
-
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
-
-/* Tablettes */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
     .products-grid-main {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-
-    .products-hero-title {
-        font-size: 3rem;
-        letter-spacing: 5px;
-    }
-
-    .product-card-main {
-        height: 450px;
     }
 }
 
 @media (max-width: 968px) {
-    .products-hero {
-        height: 100vh;
-        min-height: 100vh;
-    }
-
     .products-hero-title {
         font-size: 2.5rem;
         letter-spacing: 4px;
     }
-
-    .products-hero-subtitle {
-        font-size: 1rem;
-    }
-
-    .scroll-indicator {
-        display: none;
-    }
-
-    .slide-indicators {
-        bottom: 20px;
-    }
-
+    
     .products-grid-main {
         grid-template-columns: 1fr;
-        gap: 2rem;
     }
-
-    .product-card-main {
-        height: 400px;
-    }
-
-    /* ✅ MOBILE: Overlay et icône s'affichent après 1 seconde */
+    
     .product-overlay-main {
-        padding: 2rem;
-        opacity: 0;
-        transition: none;
-    }
-
-    .product-card-main.in-view .product-overlay-main {
-        animation: showOverlay 0.5s ease 1s forwards;
-    }
-
-    .product-card-main.in-view .product-icon-main {
-        animation: hideIcon 0.5s ease 1s forwards;
-    }
-
-    .product-overlay-main h3 {
-        font-size: 1.2rem;
-        letter-spacing: 2px;
-    }
-
-    .cta-section h2 {
-        font-size: 2rem;
-    }
-
-    .cta-section p {
-        font-size: 1rem;
+        background: rgba(32, 32, 32, 0.85);
     }
 }
 
-/* Mobile */
 @media (max-width: 576px) {
-    .products-hero {
-        height: 100vh;
-        min-height: 100vh;
-    }
-
     .products-hero-title {
         font-size: 1.8rem;
-        letter-spacing: 3px;
-        line-height: 1.2;
     }
-
-    .products-hero-subtitle {
-        font-size: 0.9rem;
-        letter-spacing: 1px;
-    }
-
     
-
-    .slide-indicators {
-        bottom: 15px;
-        gap: 8px;
-    }
-
-    .indicator {
-        width: 10px;
-        height: 10px;
-    }
-
-    .products-section {
-        padding: 2rem 0 4rem;
-    }
-
     .product-card-main {
-        height: 350px;
-    }
-
-    .product-overlay-main {
-        padding: 1.5rem;
-    }
-
-    .product-overlay-main h3 {
-        font-size: 1.1rem;
-        letter-spacing: 2px;
-        margin-bottom: 1rem;
-    }
-
-    .product-overlay-main p {
-        font-size: 0.85rem;
-        line-height: 1.6;
-        margin-bottom: 1.2rem;
-    }
-
-    .product-features {
-        margin-bottom: 1.5rem;
-    }
-
-    .product-features li {
-        font-size: 0.8rem;
-        line-height: 1.8;
-    }
-
-    .btn-product {
-        padding: 0.65rem 1.5rem;
-        font-size: 0.8rem;
-        letter-spacing: 1.5px;
-    }
-
-    .products-hero .btn-primary {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
-    }
-
-    .cta-section {
-        padding: 3rem 0;
-    }
-
-    .cta-section h2 {
-        font-size: 1.6rem;
-    }
-
-    .cta-section p {
-        font-size: 0.9rem;
-        padding: 0 1rem;
-    }
-
-    .product-badge {
-        top: 15px;
-        right: 15px;
-        padding: 0.4rem 0.8rem;
-        font-size: 0.7rem;
-    }
-}
-
-/* Très petits écrans */
-@media (max-width: 360px) {
-    .products-hero-title {
-        font-size: 1.5rem;
-        letter-spacing: 2px;
-    }
-
-    .product-card-main {
-        height: 320px;
-    }
-}
-
-/* Mode paysage mobile */
-@media (max-height: 500px) and (orientation: landscape) {
-    .products-hero {
-        height: 100vh;
-        min-height: 100vh;
-    }
-
-    .scroll-indicator {
-        display: none;
-    }
-
-    .slide-indicators {
-        bottom: 15px;
+        height: 400px;
     }
 }

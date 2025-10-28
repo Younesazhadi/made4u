@@ -1,6 +1,6 @@
 /* ============================================
-   PRODUCTS PAGE - EXTERIEUR
-   Version finale avec effet mobile (description après 1 sec)
+   PRODUCTS PAGE - INTERIEUR
+   Style identique à la page extérieur
    ============================================ */
 
 /* Hero Section avec Slideshow */
@@ -60,10 +60,6 @@
     padding: 0 20px;
 }
 
-
-
-
-
 .products-hero-title {
     font-size: 4rem;
     font-weight: 700;
@@ -85,7 +81,6 @@
     animation: fadeInUp 1s ease 0.2s backwards;
 }
 
-/* Bouton dans le Hero */
 .products-hero .btn-primary {
     animation: fadeInUp 1s ease 0.4s backwards;
 }
@@ -201,8 +196,6 @@
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
-
-
 /* Product Image */
 .product-image-main {
     position: absolute;
@@ -222,73 +215,62 @@
     transform: scale(1.05);
 }
 
-/* ============================================
-   NOUVELLES IMAGES DE FOND PRODUITS
-   ============================================ */
-
-.product-image-main.pergola {
+/* Images de fond pour chaque produit INTÉRIEUR */
+.product-image-main.store-enrouleur {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/pergola.png');
+                url('images/store-enrouleur.png');
     background-size: cover;
     background-position: center;
 }
 
-.product-image-main.verso {
+.product-image-main.store-jour-nuit {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/verso.png');
+                url('images/store-jour-nuit.png');
     background-size: cover;
     background-position: center;
 }
 
-.product-image-main.store-banne {
+.product-image-main.store-venitien {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/store-banne.png');
+                url('images/store-venitien.png');
     background-size: cover;
     background-position: center;
 }
 
-.product-image-main.parasol {
+.product-image-main.bande-verticale {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/parasol.jpg');
+                url('images/bande-verticale.png');
     background-size: cover;
     background-position: center;
 }
 
-.product-image-main.abri-voiture {
+.product-image-main.rideau-voilage {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/abri-voiture.jpg');
+                url('images/rideau-voilage.png');
     background-size: cover;
     background-position: center;
 }
 
-.product-image-main.store-verriere {
+.product-image-main.moustiquaire {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/store-verriere.jpg');
+                url('images/moustiquaire.png');
     background-size: cover;
     background-position: center;
 }
 
-.product-image-main.dalot {
+.product-image-main.store-bateau {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/dalot.png');
+                url('images/store-bateau.png');
     background-size: cover;
     background-position: center;
 }
 
-.product-image-main.couverture-piscine {
+.product-image-main.store-japonais {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/couverture-piscine.png');
+                url('images/store-japonais.png');
     background-size: cover;
     background-position: center;
 }
-
-.product-image-main.store-vertical {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('images/store-vertical.png');
-    background-size: cover;
-    background-position: center;
-}
-
 
 /* Product Icon */
 .product-icon-main {
@@ -393,7 +375,7 @@
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, #BD9A68  0%, #202020 100%);
+    background: linear-gradient(135deg, #BD9A68 0%, #202020 100%);
     padding: 5rem 0;
     text-align: center;
     color: #FFFFFF;
@@ -415,7 +397,7 @@
     margin-right: auto;
 }
 
-/* Animation d'entrée - Toutes les cartes ensemble */
+/* Animation d'entrée */
 .product-card-main {
     opacity: 0;
     transform: translateY(30px);
@@ -425,7 +407,6 @@
     animation: fadeInUp 0.6s ease forwards;
 }
 
-/* Toutes les cartes s'animent en même temps (pas de délai) */
 .product-card-main:nth-child(1).visible,
 .product-card-main:nth-child(2).visible,
 .product-card-main:nth-child(3).visible,
@@ -433,19 +414,14 @@
 .product-card-main:nth-child(5).visible,
 .product-card-main:nth-child(6).visible,
 .product-card-main:nth-child(7).visible,
-.product-card-main:nth-child(8).visible,
-.product-card-main:nth-child(9).visible {
+.product-card-main:nth-child(8).visible {
     animation-delay: 0s;
 }
 
 /* Animations pour mobile */
 @keyframes showOverlay {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes hideIcon {
@@ -512,7 +488,6 @@
         height: 400px;
     }
 
-    /* ✅ MOBILE: Overlay et icône s'affichent après 1 seconde */
     .product-overlay-main {
         padding: 2rem;
         opacity: 0;
@@ -558,8 +533,6 @@
         font-size: 0.9rem;
         letter-spacing: 1px;
     }
-
-    
 
     .slide-indicators {
         bottom: 15px;
@@ -626,13 +599,6 @@
     .cta-section p {
         font-size: 0.9rem;
         padding: 0 1rem;
-    }
-
-    .product-badge {
-        top: 15px;
-        right: 15px;
-        padding: 0.4rem 0.8rem;
-        font-size: 0.7rem;
     }
 }
 

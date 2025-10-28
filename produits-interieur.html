@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits Intérieur - Made4U</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="produits-interieur.css" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <img src="images/logo-made4u.png" alt="Made4U Logo" class="loader-logo">
+        <div class="loader-progress">
+            <div class="loader-progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo-made4u.png" alt="Made4U Logo">
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="index.html#apropos" class="nav-link">À propos</a></li>
+                <li class="dropdown">
+                    <a href="index.html#produits" class="nav-link active">Nos Produits</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="produits-exterieur.html">Produits Extérieur</a></li>
+                        <li><a href="produits-interieur.html">Produits Intérieur</a></li>
+                        <li><a href="revetement-sol.html">Revêtement du Sol</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="index.html#devis" class="btn-devis">Devis Gratuit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section avec Diaporama -->
+    <section class="hero products-hero" id="accueil">
+        <div class="hero-slideshow">
+            <div class="hero-slide active" style="background-image: url('images/slide-interieur1.png')"></div>
+            <div class="hero-slide" style="background-image: url('images/slide-interieur2.png')"></div>
+            <div class="hero-slide" style="background-image: url('images/slide-interieur3.png')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="products-hero-title">PRODUITS INTÉRIEUR</h1>
+            <p class="products-hero-subtitle">Solutions élégantes pour vos espaces intérieurs</p>
+            <a href="#produits-section" class="btn btn-primary">Découvrir Nos Produits</a>
+        </div>
+
+        <!-- Réseaux sociaux dans le hero -->
+<div class="hero-social">
+    <a href="https://www.facebook.com/p/Khiyam-achatie-61566368161147/" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/khiyam_achatie/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.tiktok.com/@khiyam_achatie" target="_blank" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+</div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+        
+        <!-- Indicateurs de slides -->
+        <div class="slide-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section" id="produits-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nos Produits D'intérieur</span>
+                <h2>Découvrez Notre Gamme</h2>
+            </div>
+            <div class="products-grid-main">
+                
+                <!-- Product Card 1 - STORE ENROULEUR -->
+                <div class="product-card-main" data-category="stores">
+                    <div class="product-image-main store-enrouleur">
+                        <div class="product-icon-main">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="20" y="15" width="40" height="5" stroke="currentColor" stroke-width="2"/>
+                                <rect x="20" y="20" width="40" height="35" stroke="currentColor" stroke-width="2"/>
+                                <line x1="40" y1="55" x2="40" y2="60" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-overlay-main">
+                        <h3>STORE ENROULEUR</h3>
+                        <p>Store simple et élégant s'enroulant autour d'un tube. Idéal pour fenêtres et baies vitrées avec large choix de tissus occultants ou filtrants.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Système d'enroulement fluide</li>
+                            <li><i class="fas fa-check"></i> Tissus occultants ou filtrants</li>
+                            <li><i class="fas fa-check"></i> Motorisation disponible</li>
+                        </ul>
+                        <a href="index.html#devis" class="btn-product">DEMANDER UN DEVIS</a>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 - STORE JOUR ET NUIT -->
+                <div class="product-card-main" data-category="stores">
+                    <div class="product-image-main store-jour-nuit">
+                        <div class="product-icon-main">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="20" y="15" width="40" height="5" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 20H60V55H20V20Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M25 25H55M25 33H55M25 41H55M25 49H55" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-overlay-main">
+                        <h3>STORE JOUR ET NUIT</h3>
+                        <p>Double tissu avec bandes alternées opaques et transparentes. Modulez la luminosité selon vos besoins en un simple geste.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Double bande opaque/transparente</li>
+                            <li><i class="fas fa-check"></i> Luminosité ajustable</li>
+                            <li><i class="fas fa-check"></i> Design moderne et élégant</li>
+                        </ul>
+                        <a href="index.html#devis" class="btn-product">DEMANDER UN DEVIS</a>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 - STORE VÉNITIEN -->
+                <div class="product-card-main" data-category="stores">
+                    <div class="product-image-main store-venitien">
+                        <div class="product-icon-main">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="20" y="15" width="40" height="50" stroke="currentColor" stroke-width="2"/>
+                                <path d="M22 20H58M22 28H58M22 36H58M22 44H58M22 52H58M22 60H58" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-overlay-main">
+                        <h3>STORE VÉNITIEN</h3>
+                        <p>Lames horizontales orientables en aluminium ou bois. Contrôle précis de la lumière et intimité avec style classique intemporel.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Lames orientables précises</li>
+                            <li><i class="fas fa-check"></i> Aluminium ou bois</li>
+                            <li><i class="fas fa-check"></i> Nombreux coloris disponibles</li>
+                        </ul>
+                        <a href="index.html#devis" class="btn-product">DEMANDER UN DEVIS</a>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 - BANDE VERTICALE -->
+                <div class="product-card-main" data-category="stores">
+                    <div class="product-image-main bande-verticale">
+                        <div class="product-icon-main">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="15" width="50" height="50" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 20V60M28 20V60M36 20V60M44 20V60M52 20V60M60 20V60" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-overlay-main">
+                        <h3>BANDE VERTICALE</h3>
+                        <p>Store à lamelles verticales orientables, parfait pour grandes baies vitrées. Occultation modulable et habillage moderne de vos fenêtres.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Lamelles verticales orientables</li>
+                            <li><i class="fas fa-check"></i> Idéal pour grandes ouvertures</li>
+                            <li><i class="fas fa-check"></i> Occultation ajustable</li>
+                        </ul>
+                        <a href="index.html#devis" class="btn-product">DEMANDER UN DEVIS</a>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 - RIDEAU ET VOILAGE -->
+                <div class="product-card-main" data-category="decoration">
+                    <div class="product-image-main rideau-voilage">
+                        <div class="product-icon-main">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 15H65" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 15C20 15 25 25 25 40C25 55 20 65 20 65" stroke="currentColor" stroke-width="2"/>
+                                <path d="M35 15C35 15 40 25 40 40C40 55 35 65 35 65" stroke="currentColor" stroke-width="2"/>
+                                <path d="M50 15C50 15 55 25 55 40C55 55 50 65 50 65" stroke="currentColor" stroke-width="2"/>
+                                <path d="M65 15C65 15 60 25 60 40C60 55 65 65 65 65" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-overlay-main">
+                        <h3>RIDEAU ET VOILAGE</h3>
+                        <p>Large gamme de rideaux et voilages pour habiller vos fenêtres avec élégance. Tissus occultants, tamisants ou décoratifs selon vos besoins.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Large choix de tissus</li>
+                            <li><i class="fas fa-check"></i> Sur-mesure disponible</li>
+                            <li><i class="fas fa-check"></i> Pose sur tringle ou rail</li>
+                        </ul>
+                        <a href="index.html#devis" class="btn-product">DEMANDER UN DEVIS</a>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 - MOUSTIQUAIRE -->
+                <div class="product-card-main" data-category="protection">
+                    <div class="product-image-main moustiquaire">
+                        <div class="product-icon-main">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="15" width="50" height="50" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 20H60V60H20V20Z" stroke="currentColor" stroke-width="1"/>
+                                <path d="M25 25L55 55M55 25L25 55" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
+                                <circle cx="40" cy="30" r="3" fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-overlay-main">
+                        <h3>MOUSTIQUAIRE</h3>
+                        <p>Protection efficace contre insectes pour fenêtres et portes. Cadres fixes, enroulables ou plissés pour toutes vos ouvertures.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Toile maille fine anti-insectes</li>
+                            <li><i class="fas fa-check"></i> Fixe, enroulable ou plissé</li>
+                            <li><i class="fas fa-check"></i> Sur-mesure pour toutes fenêtres</li>
+                        </ul>
+                        <a href="index.html#devis" class="btn-product">DEMANDER UN DEVIS</a>
+                    </div>
+                </div>
+
+                <!-- Product Card 7 - STORE BATEAU -->
+                <div class="product-card-main" data-category="stores">
+                    <div class="product-image-main store-bateau">
+                        <div class="product-icon-main">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="20" y="15" width="40" height="5" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 20L25 40L30 35L35 40L40 35L45 40L50 35L55 40L60 20" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-overlay-main">
+                        <h3>STORE BATEAU</h3>
+                        <p>Store textile qui se replie en formant des plis horizontaux élégants. Effet décoratif raffiné pour un intérieur cosy et chaleureux.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Plis horizontaux élégants</li>
+                            <li><i class="fas fa-check"></i> Nombreux tissus décoratifs</li>
+                            <li><i class="fas fa-check"></i> Système manuel ou motorisé</li>
+                        </ul>
+                        <a href="index.html#devis" class="btn-product">DEMANDER UN DEVIS</a>
+                    </div>
+                </div>
+
+                <!-- Product Card 8 - STORE JAPONAIS -->
+                <div class="product-card-main" data-category="stores decoration">
+                    <div class="product-image-main store-japonais">
+                        <div class="product-icon-main">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="15" width="15" height="50" stroke="currentColor" stroke-width="2"/>
+                                <rect x="32" y="15" width="15" height="50" stroke="currentColor" stroke-width="2"/>
+                                <rect x="50" y="15" width="15" height="50" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-overlay-main">
+                        <h3>STORE JAPONAIS</h3>
+                        <p>Panneaux coulissants design pour habiller baies vitrées et grandes ouvertures. Style épuré et contemporain pour un intérieur zen.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Panneaux coulissants élégants</li>
+                            <li><i class="fas fa-check"></i> Parfait pour grandes baies</li>
+                            <li><i class="fas fa-check"></i> Design minimaliste et moderne</li>
+                        </ul>
+                        <a href="index.html#devis" class="btn-product">DEMANDER UN DEVIS</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Besoin de Conseils pour Votre Projet ?</h2>
+            <p>Notre équipe d'experts est à votre disposition pour vous accompagner dans le choix de vos produits intérieurs</p>
+            <a href="index.html#devis" class="btn btn-primary">Demander un Devis Gratuit</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Made4U</h4>
+                    <p>Votre partenaire de confiance pour tous vos projets de revêtement et d'aménagement.</p>
+                    <div class="footer-social">
+        <a href="https://www.facebook.com/p/Khiyam-achatie-61566368161147/" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/khiyam_achatie/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@khiyam_achatie" target="_blank" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html#accueil">Accueil</a></li>
+                        <li><a href="index.html#apropos">À propos</a></li>
+                        <li><a href="index.html#produits">Nos Produits</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Produits</h4>
+                    <ul>
+                        <li><a href="produits-exterieur.html">Produits Extérieur</a></li>
+                        <li><a href="produits-interieur.html">Produits Intérieur</a></li>
+                        <li><a href="revetement-sol.html">Revêtement du Sol</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Av Kiffah bloc AH N8</li>
+                        <li>Rabat</li>
+                        <li>+212 661-256523</li>
+                        <li>contact@made4u.ma</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Made4U. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+<!-- Bouton Retour en haut -->
+<button onclick="topFunction()" id="myBtn" title="Retour en haut">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+</button>
+
+    <script src="script.js"></script>
+    <script src="produits-interieur.js"></script>
+</body>
+</html>

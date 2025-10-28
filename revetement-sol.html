@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revêtement du Sol - Made4U</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="revetement-sol.css" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <img src="images/logo-made4u.png" alt="Made4U Logo" class="loader-logo">
+        <div class="loader-progress">
+            <div class="loader-progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo-made4u.png" alt="Made4U Logo">
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="index.html#apropos" class="nav-link">À propos</a></li>
+                <li class="dropdown">
+                    <a href="index.html#produits" class="nav-link active">Nos Produits</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="produits-exterieur.html">Produits Extérieur</a></li>
+                        <li><a href="produits-interieur.html">Produits Intérieur</a></li>
+                        <li><a href="revetement-sol.html">Revêtement du Sol</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="index.html#devis" class="btn-devis">Devis Gratuit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section avec Diaporama -->
+    <section class="hero products-hero" id="accueil">
+        <div class="hero-slideshow">
+            <div class="hero-slide active" style="background-image: url('images/slide-sol1.png')"></div>
+            <div class="hero-slide" style="background-image: url('images/slide-sol2.png')"></div>
+            <div class="hero-slide" style="background-image: url('images/slide-sol3.png')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="products-hero-title">REVÊTEMENT DU SOL</h1>
+            <p class="products-hero-subtitle">Solutions élégantes pour sublimer vos sols</p>
+            <a href="#produits-section" class="btn btn-primary">Découvrir Nos Produits</a>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+        
+        <!-- Indicateurs de slides -->
+        <div class="slide-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section" id="produits-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nos Revêtements de Sol</span>
+                <h2>Découvrez Notre Gamme</h2>
+            </div>
+            <div class="products-grid-main">
+                
+                <!-- Product Card 1 - MOQUETTE -->
+                <div class="product-card-main" data-category="moquette">
+                    <div class="product-image-main moquette">
+                        <div class="product-icon-main">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="15" width="50" height="50" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 20H60V60H20V20Z" fill="none" stroke="currentColor" stroke-width="1"/>
+                                ircle cx="30" cy="30" r="2"2" fill="currentColor"/>
+                                ircle cx="40" cy="30" r="2"2" fill="currentColor"/>
+                                ircle cx="50" cy="30" r="2" fillll="currentColor"/>
+                                ircle cx="30" cy="40" r="2"2" fill="currentColor"/>
+                                ircle cx="40" cy="40" r="2" fillll="currentColor"/>
+                                ircle cx="50" cy="40" r="2" fill="currentntColor"/>
+                                ircle cxcx="30" cy="50" r="2" fill="currentColor"/>
+                                ircle cx="40" cy="50" r="2"2" fill="currentColor"/>
+                                ircle cx="50" cy="50" r="2" fillll="currentColor"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-overlay-main">
+                        <h3>MOQUETTE</h3>
+                        <p>Revêtement textile confortable et isolant pour un intérieur chaleureux. Large gamme de couleurs et textures pour tous vos espaces.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Confort acoustique et thermique</li>
+                            <li><i class="fas fa-check"></i> Large choix de coloris</li>
+                            <li><i class="fas fa-check"></i> Pose collée ou tendue</li>
+                        </ul>
+                        <a href="index.html#devis" class="btn-product">DEMANDER UN DEVIS</a>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 - PVC -->
+                <div class="product-card-main" data-category="pvc">
+                    <div class="product-image-main pvc">
+                        <div class="product-icon-main">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="15" width="50" height="50" stroke="currentColor" stroke-width="2"/>
+                                <path d="M15 30H65M15 40H65M15 50H65" stroke="currentColor" stroke-width="2"/>
+                                <path d="M25 15V65M35 15V65M45 15V65M55 15V65" stroke="currentColor" stroke-width="1"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-overlay-main">
+                        <h3>SOL PVC</h3>
+                        <p>Revêtement vinyle résistant et facile d'entretien. Imitation bois, carrelage ou béton avec un excellent rapport qualité-prix.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Résistant et durable</li>
+                            <li><i class="fas fa-check"></i> Facile à entretenir</li>
+                            <li><i class="fas fa-check"></i> Nombreux designs disponibles</li>
+                        </ul>
+                        <a href="index.html#devis" class="btn-product">DEMANDER UN DEVIS</a>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 - PARQUET -->
+                <div class="product-card-main" data-category="parquet">
+                    <div class="product-image-main parquet">
+                        <div class="product-icon-main">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="20" width="50" height="8" stroke="currentColor" stroke-width="2"/>
+                                <rect x="15" y="32" width="50" height="8" stroke="currentColor" stroke-width="2"/>
+                                <rect x="15" y="44" width="50" height="8" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 24H25M30 24H35M40 24H45M50 24H55M60 24H63" stroke="currentColor" stroke-width="1"/>
+                                <path d="M20 36H25M30 36H35M40 36H45M50 36H55M60 36H63" stroke="currentColor" stroke-width="1"/>
+                                <path d="M20 48H25M30 48H35M40 48H45M50 48H55M60 48H63" stroke="currentColor" stroke-width="1"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="product-overlay-main">
+                        <h3>PARQUET</h3>
+                        <p>Élégance naturelle du bois massif ou contrecollé pour un intérieur authentique. Durabilité et noblesse pour valoriser votre habitat.</p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Bois massif ou contrecollé</li>
+                            <li><i class="fas fa-check"></i> Essence et finitions variées</li>
+                            <li><i class="fas fa-check"></i> Pose clouée, collée ou flottante</li>
+                        </ul>
+                        <a href="index.html#devis" class="btn-product">DEMANDER UN DEVIS</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Besoin de Conseils pour Votre Projet ?</h2>
+            <p>Notre équipe d'experts est à votre disposition pour vous accompagner dans le choix de votre revêtement de sol</p>
+            <a href="index.html#devis" class="btn btn-primary">Demander un Devis Gratuit</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Made4U</h4>
+                    <p>Votre partenaire de confiance pour tous vos projets de revêtement et d'aménagement.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/votrepage" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/votrepage" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@votrepage" target="_blank" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html#accueil">Accueil</a></li>
+                        <li><a href="index.html#apropos">À propos</a></li>
+                        <li><a href="index.html#produits">Nos Produits</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Produits</h4>
+                    <ul>
+                        <li><a href="produits-exterieur.html">Produits Extérieur</a></li>
+                        <li><a href="produits-interieur.html">Produits Intérieur</a></li>
+                        <li><a href="revetement-sol.html">Revêtement du Sol</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Av Kiffah bloc AH N8</li>
+                        <li>Rabat</li>
+                        <li>+212 661-256523</li>
+                        <li>contact@made4u.ma</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Made4U. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+<!-- Bouton Retour en haut -->
+<button onclick="topFunction()" id="myBtn" title="Retour en haut">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+</button>
+
+    <script src="script.js"></script>
+    <script src="revetement-sol.js"></script>
+</body>
+</html>

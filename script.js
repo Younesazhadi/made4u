@@ -498,3 +498,35 @@ if (window.innerWidth <= 968) {
         productObserver.observe(card);
     });
 }
+
+// ============================================
+// BOUTON RETOUR EN HAUT
+// ============================================
+
+// Récupérer le bouton
+let mybutton = document.getElementById("myBtn");
+
+// Afficher le bouton après 300px de scroll
+window.addEventListener('scroll', scrollFunction);
+
+function scrollFunction() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        mybutton.style.display = "block";
+        mybutton.style.opacity = "1";
+    } else {
+        mybutton.style.opacity = "0";
+        setTimeout(() => {
+            if (document.documentElement.scrollTop <= 300) {
+                mybutton.style.display = "none";
+            }
+        }, 300);
+    }
+}
+
+// Fonction pour remonter en haut avec animation fluide
+function topFunction() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
